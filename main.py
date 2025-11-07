@@ -11,8 +11,9 @@ from telegram.ext import (
 from handlers import admin_panel, client_verify, bulk_import, groups
 from config import BOT_TOKEN  # ✅ securely imported
 
-# 🪟 Fix for Windows async loops
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+# 🪟 Fix for Windows async loops (only on Windows)
+if os.name == "nt":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 # 🌐 Prevent HTTPS blocking (Windows workaround)
 os.environ["PYTHONHTTPSVERIFY"] = "0"
