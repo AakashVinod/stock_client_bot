@@ -7,7 +7,7 @@ It’s built to be modular, admin-controlled, and automated — everything manag
 A modular Telegram client management bot built with Python and python-telegram-bot.
 Deployed on Render with an integrated Flask keep-alive server, and kept online 24/7 using UptimeRobot HTTP monitoring.
 
-## 🚀 Features
+## 🚀 Features 
 
 - 🔐 1️⃣ Client Verification System
 💬 When a user sends their Client ID to the bot:
@@ -94,13 +94,13 @@ Perfect for:
 
 Basically, any system where you need automated group access based on user verification.
 
-##🌍 Deployment Setup
+## 🌍 Deployment Setup
 
 The bot is hosted on Render using a free web service.
 Since Render’s free instances automatically “sleep” after ~15 minutes of inactivity, a Flask keep-alive endpoint (/) is added.
 This endpoint returns a simple response so the service can receive periodic pings.
 
-##💡 24/7 Uptime with UptimeRobot
+## 💡 24/7 Uptime with UptimeRobot
 
 To prevent the Render instance from going idle:
 The public Flask route (https://your-app-name.onrender.com/) is monitored by UptimeRobot every few minutes.
@@ -119,6 +119,9 @@ UptimeRobot (Ping Monitoring)
 # 👨‍💻 Author
 
 Akash Vinod
+
 💼 [Akash Vinod](https://github.com/AakashVinod)
+
 🧠 Originally developed this Telegram Client Bot with Flask keep-alive and Render deployment
+
 🕓 Keeping it alive 24/7 via UptimeRobot integration
