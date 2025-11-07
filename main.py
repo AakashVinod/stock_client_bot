@@ -34,7 +34,7 @@ if not BOT_TOKEN:
 # ⚙️ Build the bot
 app = ApplicationBuilder().token(BOT_TOKEN).build()
 
-# 🧩 Register all handlers
+# 🧩 Register handlers
 client_verify.register_handlers(app)
 admin_panel.register_handlers(app)
 bulk_import.register_handlers(app)
@@ -42,22 +42,19 @@ groups.register_handlers(app)
 
 print("✅ Invite link system loaded successfully")
 
-# 🌐 Simple Flask web server to keep Render’s web service alive
+# 🌍 Flask keep-alive server
 flask_app = Flask(__name__)
 
-@flask_app.route("/")
+@flask_app.route('/')
 def home():
-    return "✅ Business Client Bot is running successfully!"
+    return "🤖 Telegram Bot is alive!", 200
 
 def run_flask():
-    port = int(os.getenv("PORT", 10000))
+    port = int(os.environ.get("PORT", 10000))
     flask_app.run(host="0.0.0.0", port=port)
 
+# 🚀 Start Flask server and bot
 if __name__ == "__main__":
-    print("🚀 Starting bot with Flask keep-alive server (Render mode)...")
-    
-    # Start Flask in a background thread (to prevent blocking the bot)
-    threading.Thread(target=run_flask, daemon=True).start()
-    
-    # Run Telegram bot polling
+    threading.Thread(target=run_flask).start()
+    print("🤖 Bot running (modular v2)...")
     app.run_polling(poll_interval=2.0, timeout=5.0)
