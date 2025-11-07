@@ -1,15 +1,16 @@
 
 # 💼 Business Client Telegram Bot
-
+<br>
 This bot is designed for businesses, trading services, or private communities that need to verify clients and automatically add them to specific Telegram groups — safely and efficiently.
 It’s built to be modular, admin-controlled, and automated — everything managed right inside Telegram itself
-
+<br>
+<br>
 A modular Telegram client management bot built with Python and python-telegram-bot.
 Deployed on Render with an integrated Flask keep-alive server, and kept online 24/7 using UptimeRobot HTTP monitoring.
 
 ## 🚀 Features 
 
-- 🔐 1️⃣ Client Verification System
+-🔐 1️⃣ Client Verification System
 💬 When a user sends their Client ID to the bot:
 The bot checks if that ID exists in the database.
 Each client ID is mapped to a specific group (for example: Premium, Limitless, Gold Members, etc.)
@@ -19,7 +20,7 @@ The client can use that link to join the private Telegram group instantly.
 ❌ Invalid Client ID. Please contact support.
 ✅ This system ensures only verified clients can access exclusive or paid groups — no manual checking required.
 
-- 🧩 2️⃣ Powerful Admin Panel (via /panel command)
+-🧩 2️⃣ Powerful Admin Panel (via /panel command)
 Only admin users can access this menu.
 When the admin types /panel, an interactive inline menu appears with buttons like:
 
@@ -32,7 +33,7 @@ When the admin types /panel, an interactive inline menu appears with buttons lik
 
 Each button performs a different management action — all handled via Telegram inline buttons, no typing commands manually.
 
-💡 Features inside panel:
+-💡 Features inside panel:
 ➕ Add Client → Add a single client ID and assign it to a group.
 📦 Bulk Clients → Add multiple client IDs from a text file or list.
 🏷 Groups → Add, list, or remove Telegram groups from the system.
@@ -109,11 +110,11 @@ As a result, the Telegram bot process inside the same container remains alive in
 
 ## ⚙️ Tech Stack
 
-Python 3.11+
-python-telegram-bot v21
-Flask (for keep-alive)
-SQLite3
-Render (Hosting)
+Python 3.11+<br>
+python-telegram-bot v21<br>
+Flask (for keep-alive)<br>
+SQLite3<br>
+Render (Hosting)<br>
 UptimeRobot (Ping Monitoring)
 
 # 👨‍💻 Author
